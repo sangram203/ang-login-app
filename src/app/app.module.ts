@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './notfound/notfound.component';
+import { NavComponent } from './includes/navigation/nav.component';
+import { FooterComponent } from './includes/footer/footer.component';
 
 @NgModule({
   imports:      [ 
@@ -26,6 +28,8 @@ import { NotFoundComponent } from './notfound/notfound.component';
     LoginComponent, 
     HomeComponent, 
     AdminComponent,
+    NavComponent,
+    FooterComponent,
     NotFoundComponent 
     ],
   bootstrap:    [ AppComponent ]
