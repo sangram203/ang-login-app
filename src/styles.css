@@ -1,0 +1,11 @@
+/* Add application styles & imports to this file! */
+.mainContainer{
+  width:100%;
+  text-align:center;
+  height:100vh
+}
+.mainWrapper{
+  height:100%;
+  margin:0 auto;
+  width:80%
+}
