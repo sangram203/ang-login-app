@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector:'app-form',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls:['./login.component.css']
 })
 export class LoginComponent{
-  username="sangram.hati@mphasis.com"
+  defaultUsername="sangram.hati@mphasis.com"
+  form = new FormGroup({
+    username: new FormControl('',[Validators.required]),
+    password: new FormControl('',[])
+  });
 }

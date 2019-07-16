@@ -1,12 +1,12 @@
 <div class="userLoginBox">
   <div class="userLoginHeader"><p>Login</p></div>
-    <form class="userLoginBody">
+    <form class="userLoginBody" [formGroup]="form">
         <div class="userFormGroup">
-          <input type="text" placeholder="Enter Username" class="userFormControl" >
-          <small>For example({{username}})</small>
+          <input formControlName="username" type="text" placeholder="Enter Username" class="userFormControl" >
+          <small>For example({{defaultUsername}})</small>
         </div>
         <div class="userFormGroup">
-          <input type="password" placeholder="Enter password"class="userFormControl">
+          <input formControlName="password" type="password" placeholder="Enter password"class="userFormControl">
         </div>
         <div class="userFormGroup">
           <button class="userBtn userBtn-info userBtn-borderBottom-tick-info">Login</button>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -16,8 +16,10 @@ import { FooterComponent } from './includes/footer/footer.component';
     BrowserModule, 
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
-      {path:'', component: HomeComponent },
+      {path:'',redirectTo: 'home', pathMatch: 'full'},
+      {path:'home', component: HomeComponent },
       {path:'login', component: LoginComponent },
       {path:'admin', component: AdminComponent},
       {path:'**',component: NotFoundComponent}
