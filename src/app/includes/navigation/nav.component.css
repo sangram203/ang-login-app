@@ -16,9 +16,9 @@ nav ul li a{
   text-decoration: none;
   color:white;
   text-transform: uppercase;
-  padding:5px 10px;
 }
-nav ul li a.active{
+nav ul li.active{
   background:rgb(0, 88, 221);
   border-radius: 5px;
+  padding:5px 10px;
 }
