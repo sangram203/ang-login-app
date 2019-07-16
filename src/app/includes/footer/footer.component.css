@@ -1,0 +1,13 @@
+.footerContainer{
+width:auto;
+background:rgb(22, 22, 22);
+display: flex;
+margin-top:10px;
+padding: 10px;
+align-items:center;
+justify-content:center;
+}
+.footerContainer a{
+color:white;
+text-decoration:none;
+}
