@@ -1,15 +1,21 @@
 <div class="userLoginBox">
   <div class="userLoginHeader"><p>Login</p></div>
-    <form class="userLoginBody" [formGroup]="form">
+    <form class="userLoginBody" [formGroup]="form" (ngSubmit)="login(form)">
         <div class="userFormGroup">
           <input formControlName="username" type="text" placeholder="Enter Username" class="userFormControl" >
           <small>For example({{defaultUsername}})</small>
+          <div class="errors" *ngIf="username.touched && username.invalid">
+            <div>Username is required</div>
+          </div>
         </div>
         <div class="userFormGroup">
           <input formControlName="password" type="password" placeholder="Enter password"class="userFormControl">
+          <div class="errors" *ngIf="password.touched && password.invalid">
+            <div>Password is required</div>
+          </div>
         </div>
         <div class="userFormGroup">
-          <button class="userBtn userBtn-info userBtn-borderBottom-tick-info">Login</button>
+          <button class="userBtn userBtn-info userBtn-borderBottom-tick-info" [disabled]="!form.valid">Login</button>
         </div>
     </form>   
 </div>
