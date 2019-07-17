@@ -10,6 +10,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './notfound/notfound.component';
 import { NavComponent } from './includes/navigation/nav.component';
 import { FooterComponent } from './includes/footer/footer.component';
+import { AuthService } from './common/services/auth.service';
 
 @NgModule({
   imports:      [ 
@@ -34,6 +35,6 @@ import { FooterComponent } from './includes/footer/footer.component';
     FooterComponent,
     NotFoundComponent 
     ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent]
 })
 export class AppModule { }

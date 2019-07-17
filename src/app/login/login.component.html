@@ -2,9 +2,9 @@
   <div class="userLoginHeader"><p>Login</p></div>
     <form class="userLoginBody" [formGroup]="form" (ngSubmit)="login(form)">
         <div class="userFormGroup">
-          <input formControlName="username" type="text" placeholder="Enter Username" class="userFormControl" >
+          <input formControlName="email" type="text" placeholder="Enter Username" class="userFormControl" >
           <small>For example({{defaultUsername}})</small>
-          <div class="errors" *ngIf="username.touched && username.invalid">
+          <div class="errors" *ngIf="email.touched && email.invalid">
             <div>Username is required</div>
           </div>
         </div>
