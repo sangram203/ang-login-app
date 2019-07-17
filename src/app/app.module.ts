@@ -35,6 +35,7 @@ import { AuthService } from './common/services/auth.service';
     FooterComponent,
     NotFoundComponent 
     ],
-  bootstrap: [ AppComponent]
+    providers:[ AuthService],
+    bootstrap: [ AppComponent]
 })
 export class AppModule { }

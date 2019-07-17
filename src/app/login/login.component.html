@@ -1,6 +1,9 @@
 <div class="userLoginBox">
   <div class="userLoginHeader"><p>Login</p></div>
     <form class="userLoginBody" [formGroup]="form" (ngSubmit)="login(form)">
+        <div class="moduleError" *ngIf="validuser">
+          Invalid Username or Password
+        </div>
         <div class="userFormGroup">
           <input formControlName="email" type="text" placeholder="Enter Username" class="userFormControl" >
           <small>For example({{defaultUsername}})</small>

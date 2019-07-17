@@ -20,3 +20,13 @@ body{
   font-size:10px;
   margin:5px 0px;
 }
+.moduleError{
+  color:rgb(105, 0, 0);
+  font-size:12px;
+  text-align: center;
+  background:rgb(231, 101, 101);
+  border-radius:4px;
+  margin:3px;
+  padding:3px;
+  border:1px solid rgb(126, 15, 15);
+}
