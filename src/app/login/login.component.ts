@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls:['./login.component.css']
 })
 export class LoginComponent{
-  validuser: Boolean = false;
+  invaliduser: Boolean;
   constructor(private authService: AuthService, private router: Router){}
   defaultUsername="sangram.hati@mphasis.com"
   form = new FormGroup({
@@ -25,12 +25,18 @@ export class LoginComponent{
      return this.form.get('password');
    }
    login(data){
-     console.log(data.value);
      this.authService.authenticateUser(data.value)
      .subscribe((result)=>{
+       console.log('thisis result'+result);
        if(result){
          this.router.navigate(['/admin']);
+       }else{
+         this.invaliduser = true;
        }
-     });
+     }, (error) => {
+       if(error.status == 400){
+          this.invaliduser = true;
+       }
+     })
    }
 }

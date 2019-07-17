@@ -7,8 +7,14 @@ export class AuthService{
   constructor(private http: HttpClient){}
   authenticateUser(credential){
     return this.http.post(this.url,credential)
-    .map((res)=>{
-      console.log(res);
+    .map((res: any)=>{
+      let result = res;
+      if(result && result.token){
+        localStorage.setItem('token', result.token);
+        return true;
+      }else{
+        return false;
+      }
     })
   }
 }

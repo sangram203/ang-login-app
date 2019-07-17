@@ -1,7 +1,7 @@
 <div class="userLoginBox">
   <div class="userLoginHeader"><p>Login</p></div>
     <form class="userLoginBody" [formGroup]="form" (ngSubmit)="login(form)">
-        <div class="moduleError" *ngIf="validuser">
+        <div class="moduleError" *ngIf="invaliduser">
           Invalid Username or Password
         </div>
         <div class="userFormGroup">
