@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map'
+import { tokenNotExpired } from 'angular2-jwt';
+
 @Injectable()
 export class AuthService{
   url="https://reqres.in/api/login"
@@ -16,5 +18,8 @@ export class AuthService{
         return false;
       }
     })
+  }
+  isLoggedin(){
+    return tokenNotExpired();
   }
 }
